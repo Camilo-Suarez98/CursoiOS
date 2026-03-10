@@ -16,6 +16,7 @@
 		9AE7FF672F5F2F9E0070C22C /* ImageExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7FF662F5F2F9E0070C22C /* ImageExample.swift */; };
 		9AE7FF692F5F64AA0070C22C /* LabelExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7FF682F5F64AA0070C22C /* LabelExample.swift */; };
 		9AE7FF6B2F5F69C40070C22C /* ButtonExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7FF6A2F5F69C40070C22C /* ButtonExample.swift */; };
+		9AE7FF6D2F5FB4620070C22C /* TextFieldExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7FF6C2F5FB4620070C22C /* TextFieldExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		9AE7FF662F5F2F9E0070C22C /* ImageExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageExample.swift; sourceTree = "<group>"; };
 		9AE7FF682F5F64AA0070C22C /* LabelExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelExample.swift; sourceTree = "<group>"; };
 		9AE7FF6A2F5F69C40070C22C /* ButtonExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonExample.swift; sourceTree = "<group>"; };
+		9AE7FF6C2F5FB4620070C22C /* TextFieldExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				9AE7FF662F5F2F9E0070C22C /* ImageExample.swift */,
 				9AE7FF682F5F64AA0070C22C /* LabelExample.swift */,
 				9AE7FF6A2F5F69C40070C22C /* ButtonExample.swift */,
+				9AE7FF6C2F5FB4620070C22C /* TextFieldExample.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				9AE7FF652F5F2D350070C22C /* TextExample.swift in Sources */,
 				9AE7FF622F5F287D0070C22C /* MainView.swift in Sources */,
 				9AE7FF672F5F2F9E0070C22C /* ImageExample.swift in Sources */,
+				9AE7FF6D2F5FB4620070C22C /* TextFieldExample.swift in Sources */,
 				9AE7FF532F5E5EA30070C22C /* CursoiOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
