@@ -35,13 +35,16 @@ struct ButtonExample: View {
         Button(action: {
             booleanTest.toggle() // Cambia el valor entre ture y false
         }, label: {
-            Text("Boolean test es \(booleanTest ? "true" : "false")")
-                .padding(10)
-                .bold()
-                .font(.title2)
-                .foregroundStyle(.white)
-                .background(booleanTest ? .green : .gray)
-                .cornerRadius(10)
+            Label(
+                booleanTest ? "Activado" : "Desactivado",
+                systemImage: booleanTest ? "checkmark.circle.fill" : "xmark.circle.fill"
+            )
+            .padding(10)
+            .bold()
+            .font(.title2)
+            .foregroundStyle(.white)
+            .background(booleanTest ? .green : .gray)
+            .cornerRadius(10)
         })
     }
 }
