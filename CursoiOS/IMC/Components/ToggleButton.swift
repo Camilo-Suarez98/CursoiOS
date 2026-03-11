@@ -23,8 +23,11 @@ struct ToggleButton: View {
             selectedGender = gender
         }) {
             VStack {
-                Image(iconName)
-                Text(text)
+                Image(systemName: iconName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 80)
+                InformationView(text: text)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(color)

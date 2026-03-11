@@ -9,7 +9,16 @@ import SwiftUI
 
 struct MenuView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            VStack {
+                NavigationLink(destination: IMCView()) {
+                    Text("IMC Calculator")
+                }
+
+                Text("App 2")
+                Text("App 3")
+            }
+        }
     }
 }
 

@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct InformationView: View {
+    let text: String
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(text)
+            .bold()
+            .font(.largeTitle)
     }
 }
 
 #Preview {
-    InformationView()
+    InformationView(text: "text")
 }
