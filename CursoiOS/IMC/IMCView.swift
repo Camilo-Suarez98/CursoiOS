@@ -14,6 +14,7 @@ struct IMCView: View {
 //    } Forma de cambiar el navigation title ya que no se puede con estilos
     
     @State var gender: Int = 0
+    @State var height: Double = 100
     
     var body: some View {
         VStack {
@@ -21,7 +22,9 @@ struct IMCView: View {
                 ToggleButton(text: "Hombre", iconName: "heart.fill", gender: 0, selectedGender: $gender)
                 ToggleButton(text: "Mujer", iconName: "star.fill", gender: 1, selectedGender: $gender)
             }
+            HeightCalculator(selectedHeight: $height)
         }
+        .foregroundStyle(.white)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.backgroundApp)
         // .navigationTitle("IMC Calculator") Esta forma se aplica con el init de arriba

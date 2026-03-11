@@ -27,11 +27,10 @@ struct ToggleButton: View {
                     .resizable()
                     .scaledToFit()
                     .frame(height: 80)
-                InformationView(text: text)
+                InformationText(text: text)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(color)
-            .foregroundStyle(.white)
         }
     }
 }

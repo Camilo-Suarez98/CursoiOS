@@ -8,11 +8,16 @@
 import SwiftUI
 
 struct HeightCalculator: View {
+    @Binding var selectedHeight: Double
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            TitleText(text: "Altura")
+            InformationText(text: "\(Int(selectedHeight)) cm")
+            Slider(value: $selectedHeight, in: 100...220, step: 1)
+                .padding(.horizontal, 16)
+                .tint(.purple)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.backgroundComponent)
     }
-}
-
-#Preview {
-    HeightCalculator()
 }

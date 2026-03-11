@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct InformationView: View {
+struct InformationText: View {
     let text: String
     var body: some View {
         Text(text)
@@ -17,5 +17,5 @@ struct InformationView: View {
 }
 
 #Preview {
-    InformationView(text: "text")
+    InformationText(text: "text")
 }
