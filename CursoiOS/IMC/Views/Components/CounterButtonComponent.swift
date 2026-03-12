@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CounterView: View {
+struct CounterButtonComponent: View {
     @Binding var counterNum: Int
     let title: String
     var body: some View {
@@ -15,26 +15,15 @@ struct CounterView: View {
             TitleText(text: title)
             InformationText(text: "\(counterNum)")
             HStack {
-                Button(action: {
+                CounterButton(counterNum: $counterNum, actionSymbol: "minus", action: {
                     counterNum -= 1
-                }) {
-                    Text("-")
-                        .bold()
-                        .font(.largeTitle)
-                }
-                .padding(25)
-                .background(.purple)
-                .clipShape(Circle())
-                Button(action: {
+                })
+                .disabled(counterNum <= 0)
+                .opacity(counterNum <= 0 ? 0.5 : 1)
+                
+                CounterButton(counterNum: $counterNum, actionSymbol: "plus", action: {
                     counterNum += 1
-                }) {
-                    Text("+")
-                        .bold()
-                        .font(.largeTitle)
-                }
-                .padding(25)
-                .background(.purple)
-                .clipShape(Circle())
+                })
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

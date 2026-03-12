@@ -26,8 +26,8 @@ struct IMCView: View {
             }
             HeightCalculator(selectedHeight: $height)
             HStack {
-                CounterView(counterNum: $age, title: "Edad")
-                CounterView(counterNum: $weight, title: "Peso")
+                CounterButtonComponent(counterNum: $age, title: "Edad")
+                CounterButtonComponent(counterNum: $weight, title: "Peso")
             }
         }
         .foregroundStyle(.white)

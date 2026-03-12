@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A4D019F2F623B56001729A7 /* CounterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A4D019E2F623B56001729A7 /* CounterButton.swift */; };
 		9AE7A30F2F60F61C00DECCC4 /* InformationText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7A30E2F60F61C00DECCC4 /* InformationText.swift */; };
 		9AE7A3112F60F6D300DECCC4 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7A3102F60F6D300DECCC4 /* ToggleButton.swift */; };
 		9AE7A3142F60FF9900DECCC4 /* HeightCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7A3132F60FF9900DECCC4 /* HeightCalculator.swift */; };
 		9AE7A3162F6100F500DECCC4 /* TitleText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7A3152F6100F500DECCC4 /* TitleText.swift */; };
+		9AE7A3182F6108AF00DECCC4 /* CounterButtonComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7A3172F6108AF00DECCC4 /* CounterButtonComponent.swift */; };
 		9AE7FF532F5E5EA30070C22C /* CursoiOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7FF522F5E5EA30070C22C /* CursoiOSApp.swift */; };
 		9AE7FF552F5E5EA30070C22C /* Exercise1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7FF542F5E5EA30070C22C /* Exercise1.swift */; };
 		9AE7FF572F5E5EAC0070C22C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9AE7FF562F5E5EAC0070C22C /* Assets.xcassets */; };
@@ -26,10 +28,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A4D019E2F623B56001729A7 /* CounterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterButton.swift; sourceTree = "<group>"; };
 		9AE7A30E2F60F61C00DECCC4 /* InformationText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationText.swift; sourceTree = "<group>"; };
 		9AE7A3102F60F6D300DECCC4 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 		9AE7A3132F60FF9900DECCC4 /* HeightCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightCalculator.swift; sourceTree = "<group>"; };
 		9AE7A3152F6100F500DECCC4 /* TitleText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleText.swift; sourceTree = "<group>"; };
+		9AE7A3172F6108AF00DECCC4 /* CounterButtonComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterButtonComponent.swift; sourceTree = "<group>"; };
 		9AE7FF4F2F5E5EA30070C22C /* CursoiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CursoiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AE7FF522F5E5EA30070C22C /* CursoiOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CursoiOSApp.swift; sourceTree = "<group>"; };
 		9AE7FF542F5E5EA30070C22C /* Exercise1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise1.swift; sourceTree = "<group>"; };
@@ -56,15 +60,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9AE7A30C2F60F44C00DECCC4 /* Components */ = {
+		9A4D019C2F6239DA001729A7 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				9AE7A30E2F60F61C00DECCC4 /* InformationText.swift */,
+				9A4D019D2F623B31001729A7 /* UI */,
+				9AE7A3172F6108AF00DECCC4 /* CounterButtonComponent.swift */,
 				9AE7A3102F60F6D300DECCC4 /* ToggleButton.swift */,
+				9AE7A30E2F60F61C00DECCC4 /* InformationText.swift */,
 				9AE7A3132F60FF9900DECCC4 /* HeightCalculator.swift */,
 				9AE7A3152F6100F500DECCC4 /* TitleText.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		9A4D019D2F623B31001729A7 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				9A4D019E2F623B56001729A7 /* CounterButton.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		9AE7A30C2F60F44C00DECCC4 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9AEC7A422F607936003B2F6A /* IMCView.swift */,
+				9A4D019C2F6239DA001729A7 /* Components */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		9AE7FF462F5E5EA30070C22C = {
@@ -129,8 +152,7 @@
 		9AEC7A412F60791C003B2F6A /* IMC */ = {
 			isa = PBXGroup;
 			children = (
-				9AE7A30C2F60F44C00DECCC4 /* Components */,
-				9AEC7A422F607936003B2F6A /* IMCView.swift */,
+				9AE7A30C2F60F44C00DECCC4 /* Views */,
 			);
 			path = IMC;
 			sourceTree = "<group>";
@@ -215,10 +237,12 @@
 				9AE7FF622F5F287D0070C22C /* MainView.swift in Sources */,
 				9AE7FF672F5F2F9E0070C22C /* ImageExample.swift in Sources */,
 				9AE7A3162F6100F500DECCC4 /* TitleText.swift in Sources */,
+				9A4D019F2F623B56001729A7 /* CounterButton.swift in Sources */,
 				9AE7FF6D2F5FB4620070C22C /* TextFieldExample.swift in Sources */,
 				9AEC7A432F607936003B2F6A /* IMCView.swift in Sources */,
 				9AE7FF532F5E5EA30070C22C /* CursoiOSApp.swift in Sources */,
 				9AE7A3142F60FF9900DECCC4 /* HeightCalculator.swift in Sources */,
+				9AE7A3182F6108AF00DECCC4 /* CounterButtonComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
