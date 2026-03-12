@@ -1,18 +1,18 @@
 //
-//  CounterView.swift
+//  CounterButton.swift
 //  CursoiOS
 //
-//  Created by Camilo on 3/10/26.
+//  Created by Camilo on 3/11/26.
 //
 
 import SwiftUI
 
-struct CounterView: View {
+struct CounterButton: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    CounterView()
+    CounterButton()
 }
