@@ -28,5 +28,5 @@ struct IMCCalculateButton: View {
 }
 
 #Preview {
-    IMCCalculateButton(userWeight: 60, userHeight: 160)
+    IMCCalculateButton(userWeight: 60, userHeight: 170)
 }
