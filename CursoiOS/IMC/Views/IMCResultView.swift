@@ -8,11 +8,31 @@
 import SwiftUI
 
 struct IMCResultView: View {
+    let userWeight: Double
+    let userHeight: Double
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Tu resultado")
+                .bold()
+                .font(.title)
+                .foregroundStyle(.white)
+            
+            let result = calculateImc(weight: userWeight, height: userHeight)
+            InformationResultView(result: result)
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.backgroundApp)
+        .foregroundStyle(.white)
     }
 }
 
+func calculateImc(weight: Double, height: Double) -> Double {
+    let heightInMeters = height / 100
+    let result = weight / (heightInMeters * heightInMeters)
+    return result
+}
+
 #Preview {
-    IMCResultView()
+    IMCResultView(userWeight: 70, userHeight: 174)
 }

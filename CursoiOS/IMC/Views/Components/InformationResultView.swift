@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct InformationResultView: View {
+    let result: Double
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("IMC")
+                .foregroundStyle(.green)
+                .font(.title)
+                .bold()
+            Text("\(result, specifier: "%.2f")")
+                .font(.system(size: 80))
+                .bold()
+            Text("Este es un resultado normal")
+                .font(.title2)
+                .bold()
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 
 #Preview {
-    InformationResultView()
+    InformationResultView(result: 5)
 }

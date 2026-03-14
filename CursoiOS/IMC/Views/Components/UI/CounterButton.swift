@@ -11,6 +11,7 @@ struct CounterButton: View {
     @Binding var counterNum: Int
     let actionSymbol: String
     let action: () -> Void
+    
     var body: some View {
         Button(action: action) {
             ZStack {

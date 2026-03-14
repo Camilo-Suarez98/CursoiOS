@@ -10,6 +10,7 @@ import SwiftUI
 struct CounterButtonComponent: View {
     @Binding var counterNum: Int
     let title: String
+    
     var body: some View {
         VStack {
             TitleText(text: title)
@@ -24,6 +25,8 @@ struct CounterButtonComponent: View {
                 CounterButton(counterNum: $counterNum, actionSymbol: "plus", action: {
                     counterNum += 1
                 })
+                .disabled(counterNum >= 150)
+                .opacity(counterNum >= 150 ? 0.5 : 1)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)

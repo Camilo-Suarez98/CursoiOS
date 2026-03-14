@@ -9,6 +9,7 @@ import SwiftUI
 
 struct InformationText: View {
     let text: String
+    
     var body: some View {
         Text(text)
             .bold()

@@ -8,11 +8,25 @@
 import SwiftUI
 
 struct IMCCalculateButton: View {
+    let userWeight: Double
+    let userHeight: Double
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationStack {
+            NavigationLink(destination: {
+                IMCResultView(userWeight: userWeight, userHeight: userHeight)
+            }) {
+                Text("Calcular")
+                    .font(.title)
+                    .bold()
+                    .foregroundStyle(.purple)
+                    .frame(maxWidth: .infinity, maxHeight: 100)
+                    .background(.backgroundComponent)
+            }
+        }
     }
 }
 
 #Preview {
-    IMCCalculateButton()
+    IMCCalculateButton(userWeight: 60, userHeight: 160)
 }

@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HeightCalculator: View {
     @Binding var selectedHeight: Double
+    
     var body: some View {
         VStack {
             TitleText(text: "Altura")
