@@ -7,12 +7,12 @@
 
 import SwiftUI
 
-struct SuperheroSearcher: View {
+struct SuperheroFinderView: View {
     var body: some View {
         Text("Hello, World!")
     }
 }
 
 #Preview {
-    SuperheroSearcher()
+    SuperheroFinderView()
 }

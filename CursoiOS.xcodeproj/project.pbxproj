@@ -11,6 +11,7 @@
 		9A7719DA2F63A112003EF2C5 /* IMCCalculateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7719D92F63A112003EF2C5 /* IMCCalculateButton.swift */; };
 		9A7719DC2F63A640003EF2C5 /* IMCResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7719DB2F63A640003EF2C5 /* IMCResultView.swift */; };
 		9A7719DE2F63A9D9003EF2C5 /* InformationResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7719DD2F63A9D9003EF2C5 /* InformationResultView.swift */; };
+		9AC772E32F65BFA10074276B /* SuperheroFinderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC772E22F65BFA10074276B /* SuperheroFinderView.swift */; };
 		9AE7A30F2F60F61C00DECCC4 /* InformationText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7A30E2F60F61C00DECCC4 /* InformationText.swift */; };
 		9AE7A3112F60F6D300DECCC4 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7A3102F60F6D300DECCC4 /* ToggleButton.swift */; };
 		9AE7A3142F60FF9900DECCC4 /* HeightCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE7A3132F60FF9900DECCC4 /* HeightCalculator.swift */; };
@@ -35,6 +36,7 @@
 		9A7719D92F63A112003EF2C5 /* IMCCalculateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCCalculateButton.swift; sourceTree = "<group>"; };
 		9A7719DB2F63A640003EF2C5 /* IMCResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCResultView.swift; sourceTree = "<group>"; };
 		9A7719DD2F63A9D9003EF2C5 /* InformationResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationResultView.swift; sourceTree = "<group>"; };
+		9AC772E22F65BFA10074276B /* SuperheroFinderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroFinderView.swift; sourceTree = "<group>"; };
 		9AE7A30E2F60F61C00DECCC4 /* InformationText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationText.swift; sourceTree = "<group>"; };
 		9AE7A3102F60F6D300DECCC4 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 		9AE7A3132F60FF9900DECCC4 /* HeightCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightCalculator.swift; sourceTree = "<group>"; };
@@ -89,6 +91,30 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		9AC772E12F65BF890074276B /* Superhero */ = {
+			isa = PBXGroup;
+			children = (
+				9AC772E52F65BFF60074276B /* Components */,
+				9AC772E42F65BFC10074276B /* Views */,
+			);
+			path = Superhero;
+			sourceTree = "<group>";
+		};
+		9AC772E42F65BFC10074276B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9AC772E22F65BFA10074276B /* SuperheroFinderView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9AC772E52F65BFF60074276B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		9AE7A30C2F60F44C00DECCC4 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +144,7 @@
 		9AE7FF512F5E5EA30070C22C /* CursoiOS */ = {
 			isa = PBXGroup;
 			children = (
+				9AC772E12F65BF890074276B /* Superhero */,
 				9AEC7A412F60791C003B2F6A /* IMC */,
 				9AE7FF632F5F28A10070C22C /* Components */,
 				9AE7FF602F5F26010070C22C /* Exercises */,
@@ -236,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AC772E32F65BFA10074276B /* SuperheroFinderView.swift in Sources */,
 				9AE7FF552F5E5EA30070C22C /* Exercise1.swift in Sources */,
 				9AE7A30F2F60F61C00DECCC4 /* InformationText.swift in Sources */,
 				9AE7FF6B2F5F69C40070C22C /* ButtonExample.swift in Sources */,
