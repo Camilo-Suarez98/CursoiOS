@@ -1,0 +1,20 @@
+# Config con secrets
+*.xcconfig
+
+# Xcode
+*.xcodeproj/xcuserdata/
+*.xcworkspace/xcuserdata/
+DerivedData/
+*.moved-aside
+*.pbxuser
+*.perspectivev3
+
+# CocoaPods (si usas)
+Pods/
+
+# SPM
+.build/
+
+# macOS
+.DS_Store
+```
