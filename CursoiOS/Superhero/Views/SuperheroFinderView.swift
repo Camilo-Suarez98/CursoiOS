@@ -8,14 +8,15 @@
 import SwiftUI
 
 struct SuperheroFinderView: View {
-    @State var superheroname: String = ""
+    @State var superheroName: String = ""
+    @State var wrapper: ApiNetwork.WrapperHeroResponse? = nil
+    @State var loading: Bool = false
     
     var body: some View {
-        let url = "https://superheroapi.com/api/\(Config.superheroApiToken)/search/\(superheroname)"
         VStack {
             TextField(
                 "",
-                text: $superheroname,
+                text: $superheroName,
                 prompt:
                     Text("Superman...")
                     .foregroundStyle(.gray)
@@ -26,18 +27,43 @@ struct SuperheroFinderView: View {
             .foregroundStyle(.white)
             .padding(16)
             .border(.purple, width: 1.5)
-            .padding(8)
+            .padding()
             .autocorrectionDisabled()
             .onSubmit {
-                print(url)
+                loading = true
+                Task {
+                    do {
+                        wrapper = try await ApiNetwork().getHeroesByQuery(query: superheroName)
+                    } catch {
+                        print("Error")
+                    }
+                    loading = false
+                }
             }
+            
+            if loading {
+                ProgressView()
+                    .tint(.white)
+            }
+            
+            NavigationStack {
+                List(wrapper?.results ?? []) { superhero in
+                    ZStack {
+                        SuperheroItem(superhero: superhero)
+                        NavigationLink(destination: {
+                            SuperheroDetail(id: superhero.id)
+                        }) { EmptyView() }.opacity(0)
+                    }
+                    .listRowBackground(Color.backgroundApp)
+                }.listStyle(.plain)
+            }
+            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.backgroundApp)
-        .foregroundStyle(.white)
     }
 }
 
 #Preview {
-    SuperheroFinderView()
+    SuperheroFinderView(loading: false)
 }

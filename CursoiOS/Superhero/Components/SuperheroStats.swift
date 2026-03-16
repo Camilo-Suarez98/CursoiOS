@@ -6,13 +6,58 @@
 //
 
 import SwiftUI
+import Charts
 
 struct SuperheroStats: View {
+    let stats: ApiNetwork.PowerStats
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Chart {
+                SectorMark(
+                    angle: .value("Count", Int(stats.combat) ?? 0),
+                    innerRadius: .ratio(0.7),
+                    angularInset: 5
+                )
+                .cornerRadius(5)
+                .foregroundStyle(by: .value("Category", "Combat"))
+                
+                SectorMark(
+                    angle: .value("Count", Int(stats.durability) ?? 0),
+                    innerRadius: .ratio(0.7),
+                    angularInset: 5
+                )
+                .cornerRadius(5)
+                .foregroundStyle(by: .value("Category", "Durability"))
+                
+                SectorMark(
+                    angle: .value("Count", Int(stats.intelligence) ?? 0),
+                    innerRadius: .ratio(0.7),
+                    angularInset: 5
+                )
+                .cornerRadius(5)
+                .foregroundStyle(by: .value("Category", "Intelligence"))
+                
+                SectorMark(
+                    angle: .value("Count", Int(stats.power) ?? 0),
+                    innerRadius: .ratio(0.7),
+                    angularInset: 5
+                )
+                .cornerRadius(5)
+                .foregroundStyle(by: .value("Category", "Power"))
+                
+                SectorMark(
+                    angle: .value("Count", Int(stats.speed) ?? 0),
+                    innerRadius: .ratio(0.7),
+                    angularInset: 5
+                )
+                .cornerRadius(5)
+                .foregroundStyle(by: .value("Category", "Speed"))
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: 250)
+        .background(.white)
+        .cornerRadius(16)
+        .padding(24)
     }
-}
-
-#Preview {
-    SuperheroStats()
 }

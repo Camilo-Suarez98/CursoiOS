@@ -8,11 +8,45 @@
 import SwiftUI
 
 struct SuperheroDetail: View {
+    let id: String
+    @State var superhero: ApiNetwork.SuperheroDetails? = nil
+    @State var loading: Bool = true
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if loading {
+                ProgressView().tint(.white)
+            } else if let seperhero = superhero {
+                Text(superhero!.name)
+                    .bold()
+                    .font(.title)
+                    .foregroundStyle(.white)
+                ForEach(superhero!.biography.aliases, id: \.self) { alias in
+                    Text(alias)
+                        .foregroundStyle(.gray)
+                        .italic()
+                        .font(.title2)
+                }
+                
+                SuperheroStats(stats: superhero!.powerstats)
+                Spacer()
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(.backgroundApp)
+        .onAppear {
+            Task {
+                do {
+                    superhero = try await ApiNetwork().getHeroById(id: id)
+                } catch {
+                    superhero = nil
+                }
+                loading = false
+            }
+        }
     }
 }
 
 #Preview {
-    SuperheroDetail()
+    SuperheroDetail(id: "3")
 }

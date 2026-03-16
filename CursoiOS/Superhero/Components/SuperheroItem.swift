@@ -6,13 +6,21 @@
 //
 
 import SwiftUI
+import SDWebImageSwiftUI
 
 struct SuperheroItem: View {
+    let superhero: ApiNetwork.SuperheroResult
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(superhero.name)
+                .foregroundStyle(.white)
+                .bold()
+                .font(.title2)
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(.backgroundComponent)
+        }
+        .border(.white, width: 1.5)
     }
-}
-
-#Preview {
-    SuperheroItem()
 }
