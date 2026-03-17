@@ -16,19 +16,36 @@ struct SuperheroDetail: View {
         VStack {
             if loading {
                 ProgressView().tint(.white)
-            } else if let seperhero = superhero {
-                Text(superhero!.name)
+            } else if let superhero = superhero {
+                Text(superhero.name)
+                    .bold()
+                    .font(.largeTitle)
+                    .foregroundStyle(.white)
+                    .padding(.bottom, 8)
+                Text(superhero.biography.fullName)
                     .bold()
                     .font(.title)
                     .foregroundStyle(.white)
-                ForEach(superhero!.biography.aliases, id: \.self) { alias in
-                    Text(alias)
+                ForEach(superhero.biography.aliases, id: \.self) { alias in
+                    Text(alias.isEmpty ? "No aliases" : alias)
                         .foregroundStyle(.gray)
                         .italic()
                         .font(.title2)
                 }
+                let alignmentHero = superhero.biography.alignment.capitalized
+                if alignmentHero == "Good" {
+                    Text(alignmentHero)
+                        .foregroundStyle(.green)
+                        .font(.title2)
+                        .bold()
+                } else {
+                    Text(alignmentHero)
+                        .foregroundStyle(.red)
+                        .font(.title2)
+                        .bold()
+                }
                 
-                SuperheroStats(stats: superhero!.powerstats)
+                SuperheroStats(stats: superhero.powerstats)
                 Spacer()
             }
         }
@@ -48,5 +65,5 @@ struct SuperheroDetail: View {
 }
 
 #Preview {
-    SuperheroDetail(id: "3")
+    SuperheroDetail(id: "2")
 }
