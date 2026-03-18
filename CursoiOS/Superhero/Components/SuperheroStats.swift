@@ -53,6 +53,14 @@ struct SuperheroStats: View {
                 )
                 .cornerRadius(5)
                 .foregroundStyle(by: .value("Category", "Speed"))
+                
+                SectorMark(
+                    angle: .value("Count", Int(stats.strength) ?? 0),
+                    innerRadius: .ratio(0.7),
+                    angularInset: 5
+                )
+                .cornerRadius(5)
+                .foregroundStyle(by: .value("Category", "Strength"))
             }
         }
         .frame(maxWidth: .infinity, maxHeight: 250)

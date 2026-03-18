@@ -24,6 +24,7 @@ class ApiNetwork {
         let name: String
         let powerstats: PowerStats
         let biography: Biography
+        let appearance: Appearance
     }
     
     struct PowerStats: Codable {
@@ -47,6 +48,13 @@ class ApiNetwork {
             case aliases = "aliases"
             case fullName = "full-name"
         }
+    }
+    
+    struct Appearance: Codable {
+        let gender: String
+        let race: String
+        let height: [String]
+        let weight: [String]
     }
     
     func getHeroesByQuery(query: String) async throws -> WrapperHeroResponse {

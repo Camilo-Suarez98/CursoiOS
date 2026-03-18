@@ -26,24 +26,30 @@ struct SuperheroDetail: View {
                     .bold()
                     .font(.title)
                     .foregroundStyle(.white)
+                    .padding(.bottom, 8)
+                Text(superhero.appearance.gender)
+                    .bold()
+                    .font(.title)
+                    .foregroundStyle(.white)
+                    .padding(.bottom, 8)
                 ForEach(superhero.biography.aliases, id: \.self) { alias in
                     Text(alias.isEmpty ? "No aliases" : alias)
                         .foregroundStyle(.gray)
                         .italic()
-                        .font(.title2)
+                        .font(.title)
                 }
-                let alignmentHero = superhero.biography.alignment.capitalized
-                if alignmentHero == "Good" {
+                HStack {
+                    let alignmentHero = superhero.biography.alignment.capitalized
                     Text(alignmentHero)
-                        .foregroundStyle(.green)
+                        .foregroundStyle(alignmentHero == "Good" ? .green : .red)
                         .font(.title2)
                         .bold()
-                } else {
-                    Text(alignmentHero)
-                        .foregroundStyle(.red)
+                    Text("- \(superhero.biography.publisher)")
                         .font(.title2)
-                        .bold()
+                        .foregroundStyle(.white)
                 }
+                .padding(.horizontal, 8)
+                .padding(.top, 8)
                 
                 SuperheroStats(stats: superhero.powerstats)
                 Spacer()
