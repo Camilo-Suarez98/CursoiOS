@@ -16,7 +16,7 @@ struct TextFieldExample: View {
             .font(.system(size: 25))
             .padding(16)
             .background(.gray.opacity(0.2))
-            .cornerRadius(16)
+            .clipShape(RoundedRectangle(cornerRadius: 16))
             .padding(.horizontal, 20)
             .onChange(of: email) { oldValue, newValue in
                 print("Antiguo email era: \(oldValue) y el nuevo es \(newValue)")
@@ -27,7 +27,7 @@ struct TextFieldExample: View {
             .font(.system(size: 25))
             .padding(16)
             .background(.gray.opacity(0.2))
-            .cornerRadius(16)
+            .clipShape(RoundedRectangle(cornerRadius: 16))
             .padding(.horizontal, 20)
             .onChange(of: password) { oldValue, newValue in
                 print("Antiguo contraseña era: \(oldValue) y la nueva es \(newValue)")

@@ -19,7 +19,7 @@ struct SuperheroStats: View {
                     innerRadius: .ratio(0.7),
                     angularInset: 5
                 )
-                .cornerRadius(5)
+                .clipShape(RoundedRectangle(cornerRadius: 5))
                 .foregroundStyle(by: .value("Category", "Combat"))
                 
                 SectorMark(
@@ -27,7 +27,7 @@ struct SuperheroStats: View {
                     innerRadius: .ratio(0.7),
                     angularInset: 5
                 )
-                .cornerRadius(5)
+                .clipShape(RoundedRectangle(cornerRadius: 5))
                 .foregroundStyle(by: .value("Category", "Durability"))
                 
                 SectorMark(
@@ -35,7 +35,7 @@ struct SuperheroStats: View {
                     innerRadius: .ratio(0.7),
                     angularInset: 5
                 )
-                .cornerRadius(5)
+                .clipShape(RoundedRectangle(cornerRadius: 5))
                 .foregroundStyle(by: .value("Category", "Intelligence"))
                 
                 SectorMark(
@@ -43,7 +43,7 @@ struct SuperheroStats: View {
                     innerRadius: .ratio(0.7),
                     angularInset: 5
                 )
-                .cornerRadius(5)
+                .clipShape(RoundedRectangle(cornerRadius: 5))
                 .foregroundStyle(by: .value("Category", "Power"))
                 
                 SectorMark(
@@ -51,7 +51,7 @@ struct SuperheroStats: View {
                     innerRadius: .ratio(0.7),
                     angularInset: 5
                 )
-                .cornerRadius(5)
+                .clipShape(RoundedRectangle(cornerRadius: 5))
                 .foregroundStyle(by: .value("Category", "Speed"))
                 
                 SectorMark(
@@ -59,13 +59,13 @@ struct SuperheroStats: View {
                     innerRadius: .ratio(0.7),
                     angularInset: 5
                 )
-                .cornerRadius(5)
+                .clipShape(RoundedRectangle(cornerRadius: 5))
                 .foregroundStyle(by: .value("Category", "Strength"))
             }
         }
         .frame(maxWidth: .infinity, maxHeight: 250)
         .background(.white)
-        .cornerRadius(16)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
         .padding(24)
     }
 }

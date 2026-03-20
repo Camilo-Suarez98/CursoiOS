@@ -27,7 +27,7 @@ struct InformationResultView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.backgroundComponent)
-        .cornerRadius(16)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
         .padding(16)
     }
 }

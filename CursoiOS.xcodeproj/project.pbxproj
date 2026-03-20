@@ -17,6 +17,7 @@
 		9A7719DA2F63A112003EF2C5 /* IMCCalculateButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7719D92F63A112003EF2C5 /* IMCCalculateButton.swift */; };
 		9A7719DC2F63A640003EF2C5 /* IMCResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7719DB2F63A640003EF2C5 /* IMCResultView.swift */; };
 		9A7719DE2F63A9D9003EF2C5 /* InformationResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7719DD2F63A9D9003EF2C5 /* InformationResultView.swift */; };
+		9AAB0A4C2F6CDA6100C00EEB /* MapExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB0A4B2F6CDA6100C00EEB /* MapExample.swift */; };
 		9AC772E32F65BFA10074276B /* SuperheroFinderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC772E22F65BFA10074276B /* SuperheroFinderView.swift */; };
 		9AC772EA2F66592B0074276B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9AC772E92F66592B0074276B /* .gitignore */; };
 		9AC772ED2F665D090074276B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC772EC2F665D090074276B /* Config.swift */; };
@@ -49,6 +50,7 @@
 		9A7719D92F63A112003EF2C5 /* IMCCalculateButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCCalculateButton.swift; sourceTree = "<group>"; };
 		9A7719DB2F63A640003EF2C5 /* IMCResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCResultView.swift; sourceTree = "<group>"; };
 		9A7719DD2F63A9D9003EF2C5 /* InformationResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationResultView.swift; sourceTree = "<group>"; };
+		9AAB0A4B2F6CDA6100C00EEB /* MapExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapExample.swift; sourceTree = "<group>"; };
 		9AC772E22F65BFA10074276B /* SuperheroFinderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroFinderView.swift; sourceTree = "<group>"; };
 		9AC772E92F66592B0074276B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		9AC772EB2F665A1F0074276B /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				9AE7FF682F5F64AA0070C22C /* LabelExample.swift */,
 				9AE7FF6A2F5F69C40070C22C /* ButtonExample.swift */,
 				9AE7FF6C2F5FB4620070C22C /* TextFieldExample.swift */,
+				9AAB0A4B2F6CDA6100C00EEB /* MapExample.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				9AE7FF6B2F5F69C40070C22C /* ButtonExample.swift in Sources */,
 				9AE7A3112F60F6D300DECCC4 /* ToggleButton.swift in Sources */,
 				9AE7FF692F5F64AA0070C22C /* LabelExample.swift in Sources */,
+				9AAB0A4C2F6CDA6100C00EEB /* MapExample.swift in Sources */,
 				9A7719DC2F63A640003EF2C5 /* IMCResultView.swift in Sources */,
 				9A500BE32F679808006D0C81 /* SuperheroDetail.swift in Sources */,
 				9A500BE52F67A28B006D0C81 /* SuperheroStats.swift in Sources */,

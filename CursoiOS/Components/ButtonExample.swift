@@ -18,7 +18,7 @@ struct ButtonExample: View {
         .font(.system(size: 25))
         .foregroundStyle(.red)
         .background(.blue)
-        .cornerRadius(10)
+        .clipShape(RoundedRectangle(cornerRadius: 10))
         
         Button(action: {
             counter += 1
@@ -29,7 +29,7 @@ struct ButtonExample: View {
                 .font(.title)
                 .foregroundStyle(.white)
                 .background(.red)
-                .cornerRadius(10)
+                .clipShape(RoundedRectangle(cornerRadius: 10))
         })
         
         Button(action: {
@@ -44,7 +44,7 @@ struct ButtonExample: View {
             .font(.title2)
             .foregroundStyle(.white)
             .background(booleanTest ? .green : .gray)
-            .cornerRadius(10)
+            .clipShape(RoundedRectangle(cornerRadius: 10))
         })
     }
 }
