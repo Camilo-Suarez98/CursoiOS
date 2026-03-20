@@ -12,8 +12,8 @@ struct MapExample: View {
     @State var position = MapCameraPosition.region(
         MKCoordinateRegion(
             center: CLLocationCoordinate2D(
-                latitude: 7.1091338,
-                longitude: -73.1237504
+                latitude: 7.0674039,
+                longitude: -73.1032497
             ), span: MKCoordinateSpan(
                 latitudeDelta: 0.01,
                 longitudeDelta: 0.01
@@ -23,29 +23,58 @@ struct MapExample: View {
     
     var body: some View {
         ZStack {
-            Map(position: $position)
-                .mapStyle(
-                    .hybrid(
-                        elevation: .flat,
-                        showsTraffic: true
+            MapReader { proxy in
+                Map(position: $position) {
+                    Marker("Marker", coordinate: CLLocationCoordinate2D(
+                        latitude: 7.0674039,
+                        longitude: -73.1032497
+                    ))
+                }
+                    .mapStyle(
+                        .hybrid(
+                            elevation: .flat,
+                            showsTraffic: true
+                        )
                     )
-            )
+                    .onTapGesture { coor in
+                        if let coordinates = proxy.convert(coor, from: .local) {
+                            withAnimation {
+                                position = MapCameraPosition.region(
+                                    MKCoordinateRegion(
+                                        center: CLLocationCoordinate2D(
+                                            latitude: coordinates.latitude,
+                                            longitude: coordinates.longitude
+                                        ), span: MKCoordinateSpan(
+                                            latitudeDelta: 0.01,
+                                            longitudeDelta: 0.01
+                                        )
+                                    )
+                                )
+                            }
+                        }
+                    }
+//                    .onMapCameraChange(frequency: .continuous) { context in
+//                        print("Estamos en: \(context.region))
+//                              } Para tener latitud y longitud de todas las regiones por donde mueva el mapa
+            }
             
             VStack {
                 Spacer()
                 HStack {
                     Button("Punto 1") {
-                        position = MapCameraPosition.region(
-                            MKCoordinateRegion(
-                                center: CLLocationCoordinate2D(
-                                    latitude: 7.0674039,
-                                    longitude: -73.1032497
-                                ), span: MKCoordinateSpan(
-                                    latitudeDelta: 0.01,
-                                    longitudeDelta: 0.01
+                        withAnimation {
+                            position = MapCameraPosition.region(
+                                MKCoordinateRegion(
+                                    center: CLLocationCoordinate2D(
+                                        latitude: 7.0674039,
+                                        longitude: -73.1032497
+                                    ), span: MKCoordinateSpan(
+                                        latitudeDelta: 0.01,
+                                        longitudeDelta: 0.01
+                                    )
                                 )
                             )
-                        )
+                        }
                     }
                     .padding(16)
                     .background(.white)
@@ -53,17 +82,19 @@ struct MapExample: View {
                     
                     
                     Button("Punto 2") {
-                        position = MapCameraPosition.region(
-                            MKCoordinateRegion(
-                                center: CLLocationCoordinate2D(
-                                    latitude: 7.0628089,
-                                    longitude: -73.0846552
-                                ), span: MKCoordinateSpan(
-                                    latitudeDelta: 0.01,
-                                    longitudeDelta: 0.01
+                        withAnimation {
+                            position = MapCameraPosition.region(
+                                MKCoordinateRegion(
+                                    center: CLLocationCoordinate2D(
+                                        latitude: 7.0628089,
+                                        longitude: -73.0846552
+                                    ), span: MKCoordinateSpan(
+                                        latitudeDelta: 0.01,
+                                        longitudeDelta: 0.01
+                                    )
                                 )
                             )
-                        )
+                        }
                     }
                     .padding(16)
                     .background(.white)
