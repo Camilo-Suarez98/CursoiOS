@@ -32,11 +32,19 @@ struct SuperheroDetail: View {
                     .font(.title)
                     .foregroundStyle(.white)
                     .padding(.bottom, 8)
-                ForEach(superhero.biography.aliases, id: \.self) { alias in
-                    Text(alias.isEmpty ? "No aliases" : alias)
+                let aliases = superhero.biography.aliases
+                if aliases == ["-"] {
+                    Text("No aliases")
                         .foregroundStyle(.gray)
                         .italic()
                         .font(.title)
+                } else {
+                    ForEach(aliases, id: \.self) { alias in
+                        Text(alias)
+                            .foregroundStyle(.gray)
+                            .italic()
+                            .font(.title)
+                    }
                 }
                 HStack {
                     let alignmentHero = superhero.biography.alignment.capitalized
