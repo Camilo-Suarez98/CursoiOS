@@ -7,12 +7,52 @@
 
 import SwiftUI
 
-struct CustomDialog: View {
+struct CustomDialog<Content: View>: View {
+    let closeDialog: () -> Void
+    let onDismissOutside: Bool // Para definir si se le da fuera del cuadro se cierre o no
+    let content: Content
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader{ geometry in
+            ZStack {
+                Rectangle().fill(.gray.opacity(0.7))
+                    .ignoresSafeArea()
+                    .onTapGesture {
+                        if onDismissOutside {
+                            withAnimation {
+                                closeDialog()
+                            }
+                        }
+                    }
+                
+                content
+                    .frame(
+                        width: geometry.size.width - 100,
+                        height: 300
+                    )
+                    .padding()
+                    .background(.white)
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                    .overlay(alignment: .topTrailing) {
+                        Button(action: {
+                            withAnimation {
+                                closeDialog()
+                            }
+                        }, label: {
+                            Image(systemName: "xmark.circle")
+                        })
+                        .foregroundStyle(.gray)
+                        .padding(16)
+                    }
+                
+            }
+            .ignoresSafeArea()
+            .frame(
+                width: geometry.size.width,
+                height: geometry.size.height,
+                alignment: .center
+            )
+        }
+        .ignoresSafeArea()
     }
-}
-
-#Preview {
-    CustomDialog()
 }
