@@ -10,8 +10,7 @@ import SwiftUI
 var navigationItems = [
     MenuList(navItem: "IMC Calculator", navRedirect: AnyView(IMCView())),
     MenuList(navItem: "Superhero Finder", navRedirect: AnyView(SuperheroFinderView())),
-    MenuList(navItem: "App 3", navRedirect: AnyView(IMCView())),
-    MenuList(navItem: "App 4", navRedirect: AnyView(IMCView()))
+    MenuList(navItem: "Favorite Places", navRedirect: AnyView(FavoritePlaces())),
 ]
 
 struct MenuView: View {

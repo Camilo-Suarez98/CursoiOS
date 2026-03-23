@@ -18,6 +18,8 @@
 		9A7719DC2F63A640003EF2C5 /* IMCResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7719DB2F63A640003EF2C5 /* IMCResultView.swift */; };
 		9A7719DE2F63A9D9003EF2C5 /* InformationResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7719DD2F63A9D9003EF2C5 /* InformationResultView.swift */; };
 		9AAB0A4C2F6CDA6100C00EEB /* MapExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAB0A4B2F6CDA6100C00EEB /* MapExample.swift */; };
+		9ABBD6EA2F6E2D6E00D2FE26 /* FavoritePlaces.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBD6E92F6E2D6E00D2FE26 /* FavoritePlaces.swift */; };
+		9ABBD6ED2F6E2EBD00D2FE26 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ABBD6EC2F6E2EBD00D2FE26 /* Place.swift */; };
 		9AC772E32F65BFA10074276B /* SuperheroFinderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC772E22F65BFA10074276B /* SuperheroFinderView.swift */; };
 		9AC772EA2F66592B0074276B /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9AC772E92F66592B0074276B /* .gitignore */; };
 		9AC772ED2F665D090074276B /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AC772EC2F665D090074276B /* Config.swift */; };
@@ -51,6 +53,8 @@
 		9A7719DB2F63A640003EF2C5 /* IMCResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IMCResultView.swift; sourceTree = "<group>"; };
 		9A7719DD2F63A9D9003EF2C5 /* InformationResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationResultView.swift; sourceTree = "<group>"; };
 		9AAB0A4B2F6CDA6100C00EEB /* MapExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapExample.swift; sourceTree = "<group>"; };
+		9ABBD6E92F6E2D6E00D2FE26 /* FavoritePlaces.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePlaces.swift; sourceTree = "<group>"; };
+		9ABBD6EC2F6E2EBD00D2FE26 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		9AC772E22F65BFA10074276B /* SuperheroFinderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroFinderView.swift; sourceTree = "<group>"; };
 		9AC772E92F66592B0074276B /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		9AC772EB2F665A1F0074276B /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -109,6 +113,23 @@
 				9A4D019E2F623B56001729A7 /* CounterButton.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		9ABBD6E82F6E2D0F00D2FE26 /* FavoritePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				9ABBD6EB2F6E2EA900D2FE26 /* Model */,
+				9ABBD6E92F6E2D6E00D2FE26 /* FavoritePlaces.swift */,
+			);
+			path = FavoritePlaces;
+			sourceTree = "<group>";
+		};
+		9ABBD6EB2F6E2EA900D2FE26 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9ABBD6EC2F6E2EBD00D2FE26 /* Place.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9AC772E12F65BF890074276B /* Superhero */ = {
@@ -171,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				9A4C4E842F666133000FB344 /* Info.plist */,
+				9ABBD6E82F6E2D0F00D2FE26 /* FavoritePlaces */,
 				9AC772E12F65BF890074276B /* Superhero */,
 				9AEC7A412F60791C003B2F6A /* IMC */,
 				9AE7FF632F5F28A10070C22C /* Components */,
@@ -315,9 +337,11 @@
 				9AEC7A402F6072AE003B2F6A /* MenuView.swift in Sources */,
 				9A7719DA2F63A112003EF2C5 /* IMCCalculateButton.swift in Sources */,
 				9AE7FF622F5F287D0070C22C /* MainView.swift in Sources */,
+				9ABBD6EA2F6E2D6E00D2FE26 /* FavoritePlaces.swift in Sources */,
 				9AE7FF672F5F2F9E0070C22C /* ImageExample.swift in Sources */,
 				9AE7A3162F6100F500DECCC4 /* TitleText.swift in Sources */,
 				9A4D019F2F623B56001729A7 /* CounterButton.swift in Sources */,
+				9ABBD6ED2F6E2EBD00D2FE26 /* Place.swift in Sources */,
 				9AE7FF6D2F5FB4620070C22C /* TextFieldExample.swift in Sources */,
 				9AEC7A432F607936003B2F6A /* IMCView.swift in Sources */,
 				9AE7FF532F5E5EA30070C22C /* CursoiOSApp.swift in Sources */,

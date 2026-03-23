@@ -6,10 +6,27 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct FavoritePlaces: View {
+    @State var position = MapCameraPosition.region(
+        MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 7.0684633, longitude: -73.0995525),
+            span: MKCoordinateSpan(latitudeDelta: 1, longitudeDelta: 1)
+        )
+    )
+    
+    @State var places: [Place] = []
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            MapReader { proxy in
+                Map(position: $position)
+                    .onTapGesture {
+                        
+                    }
+            }
+        }
     }
 }
 
