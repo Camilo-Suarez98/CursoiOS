@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CustomDialog<Content: View>: View {
     let closeDialog: () -> Void
-    let onDismissOutside: Bool // Para definir si se le da fuera del cuadro se cierre o no
+    let onDismissOutside: Bool
     let content: Content
     
     var body: some View {
