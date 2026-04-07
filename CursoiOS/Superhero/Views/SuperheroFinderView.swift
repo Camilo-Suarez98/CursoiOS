@@ -57,7 +57,6 @@ struct SuperheroFinderView: View {
                     .listRowBackground(Color.backgroundApp)
                 }.listStyle(.plain)
             }
-            
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(.backgroundApp)

@@ -32,6 +32,10 @@ struct SuperheroDetail: View {
                     .font(.title)
                     .foregroundStyle(.white)
                     .padding(.bottom, 8)
+                Text("Aliases:")
+                    .bold()
+                    .font(.title)
+                    .foregroundStyle(.white)
                 let aliases = superhero.biography.aliases
                 if aliases == ["-"] {
                     Text("No aliases")
@@ -39,12 +43,15 @@ struct SuperheroDetail: View {
                         .italic()
                         .font(.title)
                 } else {
-                    ForEach(aliases, id: \.self) { alias in
-                        Text(alias)
-                            .foregroundStyle(.gray)
-                            .italic()
-                            .font(.title)
-                    }
+                    List {
+                        ForEach(aliases, id: \.self) { alias in
+                            Text(alias)
+                                .foregroundStyle(.gray)
+                                .italic()
+                                .font(.title)
+                        }
+                        .listRowBackground(Color("BackgroundApp"))
+                    }.listStyle(.plain)
                 }
                 HStack {
                     let alignmentHero = superhero.biography.alignment.capitalized
@@ -57,14 +64,13 @@ struct SuperheroDetail: View {
                         .foregroundStyle(.white)
                 }
                 .padding(.horizontal, 8)
-                .padding(.top, 8)
                 
                 SuperheroStats(stats: superhero.powerstats)
                 Spacer()
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(.backgroundApp)
+        .background(Color("BackgroundApp"))
         .onAppear {
             Task {
                 do {
