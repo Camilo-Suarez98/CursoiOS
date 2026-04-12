@@ -24,9 +24,9 @@ struct SuperheroFinderView: View {
             )
             .font(.title2)
             .bold()
-            .foregroundStyle(.white)
+            .foregroundStyle(.neutral)
             .padding(16)
-            .border(.purple, width: 1.5)
+            .border(.superheroTitleBlue, width: 1.5)
             .padding()
             .autocorrectionDisabled()
             .onSubmit {
@@ -43,7 +43,7 @@ struct SuperheroFinderView: View {
             
             if loading {
                 ProgressView()
-                    .tint(.white)
+                    .tint(.superheroTitleBlue)
             }
             
             NavigationStack {
@@ -54,12 +54,11 @@ struct SuperheroFinderView: View {
                             SuperheroDetail(id: superhero.id)
                         }) { EmptyView() }.opacity(0)
                     }
-                    .listRowBackground(Color.backgroundApp)
                 }.listStyle(.plain)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .background(.backgroundApp)
+        .background(.superheroBackground)
     }
 }
 

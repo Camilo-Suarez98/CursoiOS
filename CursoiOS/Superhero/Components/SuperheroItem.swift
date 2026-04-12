@@ -14,12 +14,11 @@ struct SuperheroItem: View {
     var body: some View {
         VStack {
             Text(superhero.name)
-                .foregroundStyle(.white)
+                .foregroundStyle(.neutral)
                 .bold()
                 .font(.title2)
                 .padding()
                 .frame(maxWidth: .infinity)
-                .background(.backgroundComponent)
         }
         .border(.white, width: 1.5)
     }
